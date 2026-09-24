@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Navaja suiza para marketeros</title>
+<meta name="description" content="Herramientas online gratuitas para el trabajo diario en marketing y comunicación, con su límite gratuito comprobado en la web oficial.">
+<meta name="theme-color" content="#0d0f12">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Navaja suiza">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0d0f12; --panel:#15181d; --panel2:#1b1f26; --line:#272d36;
+  --fg:#e9ecf1; --fg2:#c6ccd5; --dim:#8b949f; --dim2:#646d78;
+  --acc:#ff4d8d; --acc2:#35d0e8; --gold:#f5c451; --ok:#5fd39a;
+  --radius:14px; --gut:16px;
+  --safe-t:env(safe-area-inset-top,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+html{background:var(--bg)}
+body{
+  background:var(--bg);color:var(--fg);
+  font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  padding-bottom:calc(40px + var(--safe-b));
+  overflow-wrap:anywhere;-webkit-text-size-adjust:100%;
+}
+/* Fondo: cuadrícula de alfombrilla de corte con dos halos de neón.
+   Capa fija propia porque iOS ignora background-attachment:fixed. */
+body::before{
+  content:"";position:fixed;top:0;left:0;right:0;z-index:0;pointer-events:none;
+  height:100vh;height:100lvh;
+  background:
+    radial-gradient(70% 45% at 0% 0%,rgba(255,77,141,.14),transparent 70%),
+    radial-gradient(60% 45% at 100% 100%,rgba(53,208,232,.12),transparent 70%),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 28px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 28px);
+}
+[hidden]{display:none!important}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--acc2);outline-offset:2px;border-radius:6px}
+
+/* ---------- Cabecera fija ---------- */
+header{
+  position:sticky;top:0;z-index:30;
+  background:rgba(13,15,18,.9);
+  backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid var(--line);
+  padding:calc(12px + var(--safe-t)) var(--gut) 0;
+}
+.brand{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:0 2px 11px}
+.gear{flex:0 0 auto;width:27px;height:27px;color:#c9f8ff;
+  filter:drop-shadow(0 0 2px var(--acc2)) drop-shadow(0 0 7px var(--acc2))}
+.logo{margin:0;display:flex;gap:.28em;font-size:24px;font-weight:800;line-height:1.05;
+  letter-spacing:.05em;text-transform:uppercase}
+.n1{color:#ffe3ef;text-shadow:0 0 2px #fff,0 0 7px var(--acc),0 0 16px var(--acc),0 0 30px rgba(255,77,141,.55)}
+.n2{color:#defbff;text-shadow:0 0 2px #fff,0 0 7px var(--acc2),0 0 16px var(--acc2),0 0 30px rgba(53,208,232,.55)}
+.tagline{font-size:12.5px;font-weight:700;color:#ffe3ef;white-space:nowrap;
+  text-shadow:0 0 6px var(--acc),0 0 12px rgba(255,77,141,.6)}
+
+.searchwrap{position:relative}
+.searchwrap svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.5}
+#q{
+  width:100%;padding:11px 36px 11px 34px;
+  background:var(--panel2);border:1px solid var(--line);border-radius:11px;
+  color:var(--fg);font-size:16px;outline:none;-webkit-appearance:none;appearance:none;
+}
+#q::-webkit-search-cancel-button{-webkit-appearance:none}
+#q:focus{border-color:var(--acc)}
+#q::placeholder{color:var(--dim2)}
+.clearq{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  width:30px;height:30px;border-radius:50%;color:var(--dim);font-size:19px;line-height:1;
+  display:none;align-items:center;justify-content:center;
+}
+.clearq.on{display:flex}
+
+.chips{display:flex;gap:7px;margin:9px calc(-1 * var(--gut)) 0;padding:0 var(--gut) 1px;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips button{
+  flex:0 0 auto;display:flex;align-items:center;gap:6px;padding:7px 12px;
+  border:1px solid var(--line);border-radius:999px;background:var(--panel2);
+  color:var(--dim);font-size:13px;font-weight:600;
+}
+.chips button em{font-style:normal;color:var(--dim2);font-size:11.5px;font-variant-numeric:tabular-nums}
+.chips button.on{border-color:var(--acc);color:var(--fg);background:rgba(255,77,141,.14)}
+.chips button.on em{color:#ffb3cf}
+.chips .st{color:var(--gold)}
+.chips svg{flex:0 0 auto}
+
+nav{display:flex;gap:4px;margin:6px calc(-1 * var(--gut)) 0;padding:0 var(--gut);overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{
+  flex:0 0 auto;padding:10px 12px 11px;color:var(--dim);font-size:13px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid transparent;border-radius:0;
+}
+nav button.on{color:var(--fg);border-bottom-color:var(--acc)}
+
+/* ---------- Cuerpo ---------- */
+main{position:relative;z-index:1;padding:12px var(--gut) 0;max-width:820px;margin:0 auto}
+.count{color:var(--dim2);font-size:12px;margin:2px 2px 12px;letter-spacing:.03em}
+.empty{color:var(--dim);text-align:center;padding:48px 12px;font-size:14px;line-height:1.55}
+.empty b{color:var(--fg)}
+.empty button{margin-top:14px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--fg);font-size:13px}
+
+.intro{margin:0 2px 16px}
+.intro p{margin:0 0 12px;color:var(--dim);font-size:13.5px;line-height:1.5;max-width:62ch}
+.introacts{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.suggest{
+  display:inline-flex;align-items:center;gap:7px;padding:8px 13px;
+  border:1px solid var(--gold);border-radius:11px;background:var(--panel2);
+  color:var(--gold);font-size:14px;font-weight:600;white-space:nowrap;transition:background .15s ease;
+}
+.suggest:hover{background:rgba(245,196,81,.16)}
+.more{color:var(--acc2);font-size:13.5px;font-weight:600}
+
+/* grupos plegables */
+.group{margin:0 0 8px}
+.ghead{
+  position:sticky;top:var(--stick,0px);z-index:5;
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  padding:13px 12px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;
+}
+.ghead:hover{border-color:var(--dim2)}
+.ghead.on{border-color:var(--acc);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.ghead .gt{flex:1;min-width:0;font-size:15px;font-weight:700;letter-spacing:.02em}
+.ghead em{font-style:normal;color:var(--dim2);font-size:12px;white-space:nowrap}
+.ghead .dot{flex:0 0 auto;width:9px;height:9px;border-radius:3px}
+.chev{flex:0 0 auto;color:var(--dim2);transition:transform .18s ease}
+.ghead.on .chev{transform:rotate(90deg);color:var(--acc)}
+.gbody{
+  border:1px solid var(--acc);border-top:0;border-radius:0 0 12px 12px;
+  padding:8px 8px 0;margin-top:-1px;background:var(--panel);
+}
+.gbody .card{background:var(--panel2)}
+
+/* ---------- Ficha de herramienta ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin-bottom:9px}
+.card.fav{border-color:rgba(255,77,141,.55);box-shadow:inset 0 0 0 1px rgba(255,77,141,.12)}
+.chead{display:flex;align-items:center;gap:11px}
+.cover{
+  flex:0 0 auto;width:42px;height:42px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:800;color:#0b0d10;
+}
+.cmeta{flex:1;min-width:0}
+.cname{display:block;font-size:15.5px;font-weight:700;line-height:1.25}
+.cname .rec{color:var(--gold);font-size:13px;margin-left:2px}
+.csub{font-size:12px;color:var(--dim2);margin-top:2px}
+.cacts{flex:0 0 auto;display:flex;align-items:center;gap:4px}
+.mk{width:34px;height:34px;border-radius:9px;color:var(--dim2);display:flex;align-items:center;justify-content:center}
+.mk:hover{background:var(--panel);color:var(--fg)}
+.mk.on{color:var(--acc)}
+.go{
+  width:34px;height:34px;border-radius:50%;border:1px solid rgba(53,208,232,.45);
+  background:var(--panel);color:var(--acc2);display:flex;align-items:center;justify-content:center;
+}
+.go:hover{border-color:var(--acc2);background:rgba(53,208,232,.12)}
+.cdesc{margin:10px 0 0;font-size:14px;color:var(--fg)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.tag{font-size:11.5px;font-weight:600;padding:3px 9px;border:1px solid var(--line);border-radius:999px;color:var(--dim)}
+.tag.ok{color:var(--acc2);border-color:rgba(53,208,232,.45)}
+.tag.loc{color:var(--ok);border-color:rgba(95,211,154,.45)}
+.tag.warn{color:var(--gold);border-color:rgba(245,196,81,.5)}
+.facts{margin:10px 0 0;padding-top:9px;border-top:1px solid var(--line);display:grid;gap:7px}
+.fact{display:grid;grid-template-columns:64px 1fr;gap:10px}
+.fact dt{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim2);padding-top:2px}
+.fact dd{margin:0;font-size:13px;color:var(--fg2);line-height:1.45}
+.fact.ex dd{color:var(--dim)}
+.fact code,.cdesc code{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:0 4px}
+
+/* ---------- Elige rápido ---------- */
+.pick h3,.route h3{margin:0;font-size:15px;font-weight:700;line-height:1.3;text-wrap:balance}
+.pk{display:grid;grid-template-columns:104px 1fr;gap:10px;margin-top:9px;padding-top:9px;border-top:1px solid rgba(39,45,54,.7);font-size:14px}
+.lbl{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim2);padding-top:3px}
+.lbl.first{color:var(--acc)}
+a.tl{color:var(--acc2);text-decoration:underline;text-decoration-color:rgba(53,208,232,.4);text-underline-offset:3px}
+
+/* ---------- Rutas ---------- */
+.rhead{display:flex;align-items:flex-start;gap:11px}
+.rn{flex:0 0 auto;width:28px;height:28px;border-radius:50%;border:1px solid var(--acc);color:var(--acc);
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
+.route h3{padding-top:4px}
+.steps{list-style:none;margin:10px 0 0 13px;padding:0;border-left:2px solid var(--line)}
+.steps li{position:relative;padding:6px 0 6px 18px;font-size:14px;color:var(--fg2)}
+.steps li::before{content:"";position:absolute;left:-7px;top:12px;width:8px;height:8px;border-radius:50%;
+  background:var(--panel2);border:2px solid var(--acc2)}
+.steps li:last-child::before{border-color:var(--acc)}
+.lead{color:var(--dim);font-size:13.5px;margin:0 2px 12px;max-width:62ch}
+.lead p{margin:0}
+
+/* ---------- Guía (texto del README) ---------- */
+.prose{padding:4px 6px 6px;font-size:14px;color:var(--fg2);line-height:1.55}
+.prose p{margin:0 0 11px;max-width:65ch}
+.prose ul,.prose ol{margin:0 0 11px;padding-left:20px}
+.prose li{margin:5px 0}
+.prose b{color:var(--fg)}
+.prose h4{margin:14px 0 6px;font-size:13px;color:var(--fg)}
+.prose a{color:var(--acc2);text-decoration:underline;text-decoration-color:rgba(53,208,232,.4);text-underline-offset:3px}
+.prose code{font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:0 4px}
+.prose pre{overflow-x:auto;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12.5px}
+.tbl{overflow-x:auto;margin:0 0 11px}
+.tbl table{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim2);padding:4px 10px 6px 0}
+.tbl td{padding:8px 10px 8px 0;border-top:1px solid var(--line);vertical-align:top}
+.tbl td:first-child{color:var(--fg);font-weight:600;width:38%}
+
+footer{color:var(--dim2);font-size:12px;text-align:center;padding:26px 8px 6px;line-height:1.7}
+footer a{color:var(--dim);text-decoration:underline;text-underline-offset:3px}
+
+@media (min-width:760px){
+  .logo{font-size:28px}
+  .tagline{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <svg class="gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="6.4"/>
+      <path d="M12 2.4v2.8M12 18.8v2.8M2.4 12h2.8M18.8 12h2.8M5.2 5.2l2 2M16.8 16.8l2 2M5.2 18.8l2-2M16.8 7.2l2-2"/>
+    </svg>
+    <h1 class="logo"><span class="n1">Navaja</span><span class="n2">suiza</span></h1>
+    <span class="tagline">para marketeros · gratis</span>
+  </div>
+  <div class="searchwrap">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+    <input id="q" type="search" placeholder="Buscar: catalán, QR, PDF, vídeo…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Buscar herramienta o tarea">
+    <button class="clearq" id="clearq" aria-label="Borrar búsqueda">×</button>
+  </div>
+  <div class="chips" id="chips">
+    <button data-f="star" aria-pressed="false"><span class="st">★</span> Recomendadas <em></em></button>
+    <button data-f="noreg" aria-pressed="false">Sin registro <em></em></button>
+    <button data-f="local" aria-pressed="false">Local <em></em></button>
+    <button data-f="fav" aria-pressed="false"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8-4.9-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 6.1-8 11-8 11z"/></svg> Mis favoritas <em></em></button>
+  </div>
+  <nav id="tabs">
+    <button data-v="tareas" class="on">Tareas</button>
+    <button data-v="elige">Elige rápido</button>
+    <button data-v="rutas">Rutas</button>
+    <button data-v="guia">Guía</button>
+  </nav>
+</header>
+
+<main>
+  <div class="count" id="count"></div>
+  <div id="app"><p class="empty">Cargando herramientas…</p></div>
+  <noscript><p class="empty">Esta página necesita JavaScript. El listado completo está en el archivo README.md del repositorio.</p></noscript>
+  <footer id="foot"></footer>
+</main>
+
+<script>
+/* =========================================================================
+   AJUSTES — lo único que puede hacer falta tocar en este archivo.
+   REPO          usuario/repositorio de GitHub (botón «Sugerir herramienta»
+                 y enlace del pie).
+   SUGGEST_EMAIL si pones aquí tu correo entre las comillas, el botón abre
+                 un correo en vez de la página de propuestas de GitHub.
+   El CONTENIDO no está aquí: la página lee README.md cada vez que se abre.
+   Para añadir o corregir una herramienta, edita README.md respetando el
+   formato de cada línea:
+   - ★ [Nombre](https://web-oficial) — qué hace. Ejemplo: uso real. Gratis: límite · Registro: sí/no · Sube archivos o Local
+   ========================================================================= */
+const REPO = 'manelferrerg/recursos';
+const SUGGEST_EMAIL = '';
+const SOURCE = 'README.md';
+
+/* ---------- utilidades ---------- */
+const $ = id => document.getElementById(id);
+const norm = s => String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const slug = s => s.toLowerCase().replace(/[^\p{L}\p{N}_\- ]/gu,'').trim().replace(/ /g,'-');
+const isWord = c => !!c && /[\p{L}\p{N}]/u.test(c);
+const initial = s => (s.toUpperCase().match(/[A-Z0-9ÁÉÍÓÚÜÑÇ]/) || ['·'])[0];
+const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+const plural = (n, one, many) => n + ' ' + (n === 1 ? one : many);
+const terms = () => query.split(/\s+/).map(norm).filter(Boolean);
+const matchQ = hay => terms().every(t => hay.includes(t));
+
+/* ---------- markdown mínimo (solo lo que usa el README) ---------- */
+function linkMD(text, href){
+  if (href[0] === '#'){
+    let s = href.slice(1); try { s = decodeURIComponent(s); } catch(e){}
+    return `<a class="in" href="${esc(href)}" data-sec="${esc(s)}">${inline(text)}</a>`;
+  }
+  return `<a href="${esc(href)}" target="_blank" rel="noopener">${inline(text)}</a>`;
+}
+function inline(s){
+  const re = /`([^`]+)`|\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
+  let out = '', last = 0, m;
+  while ((m = re.exec(s))){
+    out += esc(s.slice(last, m.index));
+    if (m[1] != null) out += `<code>${esc(m[1])}</code>`;
+    else if (m[2] != null) out += `<b>${inline(m[2])}</b>`;
+    else out += linkMD(m[3], m[4]);
+    last = re.lastIndex;
+  }
+  return out + esc(s.slice(last));
+}
+const LIST = /^\s*([-*]|\d+\.)\s+/;
+const BLOCK = /^\s*([-*]|\d+\.)\s+|^\s*\||^```|^#/;
+const cells = r => r.trim().replace(/^\||\|$/g,'').split('|').map(c => c.trim());
+function md(L){
+  let h = '', i = 0, m;
+  while (i < L.length){
+    const l = L[i];
+    if (!l.trim()){ i++; continue; }
+    if (l.startsWith('```')){
+      const buf = []; i++;
+      while (i < L.length && !L[i].startsWith('```')) buf.push(L[i++]);
+      i++; h += `<pre><code>${esc(buf.join('\n'))}</code></pre>`; continue;
+    }
+    if ((m = l.match(/^#{1,6}\s+(.*)/))){ h += `<h4>${inline(m[1])}</h4>`; i++; continue; }
+    if (/^\s*\|/.test(l)){
+      const rows = [];
+      while (i < L.length && /^\s*\|/.test(L[i])) rows.push(L[i++]);
+      const head = cells(rows[0]), body = rows.slice(2).map(cells);
+      h += `<div class="tbl"><table><thead><tr>${head.map(c => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${
+        body.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+      continue;
+    }
+    if (LIST.test(l)){
+      const items = [];
+      while (i < L.length && LIST.test(L[i])) items.push(L[i++]);
+      const lis = items.map(x => `<li>${inline(x.replace(LIST,''))}</li>`).join('');
+      h += /^\s*\d+\./.test(items[0]) ? `<ol>${lis}</ol>` : `<ul>${lis}</ul>`;
+      continue;
+    }
+    const buf = [L[i++].trim()];
+    while (i < L.length && L[i].trim() && !BLOCK.test(L[i])) buf.push(L[i++].trim());
+    h += `<p>${inline(buf.join(' '))}</p>`;
+  }
+  return h;
+}
+
+/* ---------- lectura del README ---------- */
+let DOC, TOOLS = [], CATS = [], ELIGE = [], ELIGE_LEAD = [], RUTAS = [], RUTAS_LEAD = [], GUIDE = [], ALIASES = [];
+const SEC = {};
+
+function parseDoc(text){
+  const doc = {title:'', intro:[], rev:'', sections:[]};
+  let sec = null, sub = null, m;
+  text.replace(/\r/g,'').split('\n').forEach(l => {
+    if ((m = l.match(/^# (.*)/))){ doc.title = m[1].trim(); return; }
+    if ((m = l.match(/^## (.*)/))){ sec = {title:m[1].trim(), lines:[], subs:[]}; sec.slug = slug(sec.title); doc.sections.push(sec); sub = null; return; }
+    if (!sec){ if (/^Revisado /i.test(l.trim())) doc.rev = l.trim(); else doc.intro.push(l); return; }
+    if ((m = l.match(/^### (.*)/))){ sub = {title:m[1].trim(), lines:[]}; sub.slug = slug(sub.title); sec.subs.push(sub); return; }
+    (sub || sec).lines.push(l);
+  });
+  return doc;
+}
+
+const TOOL = /^\s*-\s+(★\s*)?\[([^\]]+)\]\((https?:[^)\s]+)\)\s*[—–]\s*(.*)$/;
+function parseTool(line){
+  const m = line.match(TOOL); if (!m) return null;
+  let rest = m[4].trim();
+  const t = {star:!!m[1], name:m[2].trim(), url:m[3]};
+  const rv = rest.match(/\s*\(rev\.\s*([\d-]+)\)\s*$/);
+  if (rv){ t.rev = rv[1]; rest = rest.slice(0, rv.index).trim(); }
+  t.unverified = /\[sin verificar\]/i.test(rest);
+  const iEx = rest.indexOf(' Ejemplo: '), iGr = rest.indexOf(' Gratis: ');
+  t.desc = (iEx > -1 ? rest.slice(0, iEx) : iGr > -1 ? rest.slice(0, iGr) : rest).trim();
+  t.ex = iEx > -1 ? rest.slice(iEx + 10, iGr > iEx ? iGr : undefined).trim() : '';
+  const segs = iGr > -1 ? rest.slice(iGr + 9).split(' · ') : [];
+  t.free = (segs.shift() || '').trim();
+  segs.forEach(s => {
+    s = s.trim();
+    if (/^Registro:/i.test(s)) t.reg = s.replace(/^Registro:\s*/i,'');
+    else if (/^Local\b/i.test(s)) t.local = true;
+    else if (/^Sube archivos/i.test(s)){ t.upload = true; t.uploadNote = s.replace(/^Sube archivos[,;:]?\s*/i,''); }
+    else t.free += ' · ' + s;
+  });
+  t.noreg = !!t.reg && /^no\b/i.test(t.reg);
+  try { t.host = new URL(t.url).hostname.replace(/^www\./,''); } catch(e){ t.host = ''; }
+  t.id = norm(t.name);
+  return t;
+}
+
+function aliasesOf(name){
+  const a = new Set([name]);
+  const p = name.match(/^(.*?)\s*\(([^)]+)\)\s*$/); if (p){ a.add(p[1]); a.add(p[2]); }
+  const s = name.replace(/^(Google|Microsoft|Adobe|Meta)\s+/,''); if (s !== name && s.length > 3) a.add(s);
+  const t = name.replace(/\s+Tools$/,''); if (t !== name) a.add(t);
+  return [...a];
+}
+/* enlaza los nombres de herramienta que aparecen en un texto */
+function linkTools(raw){
+  if (/\[|\*\*|`/.test(raw)) return inline(raw);
+  const taken = [];
+  ALIASES.forEach(([al, t]) => {
+    let from = 0, k;
+    while ((k = raw.indexOf(al, from)) > -1){
+      const e = k + al.length; from = e;
+      if (isWord(raw[k-1]) || isWord(raw[e])) continue;
+      if (taken.some(r => k < r.e && e > r.s)) continue;
+      taken.push({s:k, e, t});
+    }
+  });
+  taken.sort((a, b) => a.s - b.s);
+  let out = '', last = 0;
+  taken.forEach(r => {
+    out += esc(raw.slice(last, r.s)) + `<a class="tl" href="${esc(r.t.url)}" target="_blank" rel="noopener">${esc(raw.slice(r.s, r.e))}</a>`;
+    last = r.e;
+  });
+  return out + esc(raw.slice(last));
+}
+
+function build(text){
+  DOC = parseDoc(text);
+  DOC.sections.forEach(sec => {
+    const k = norm(sec.title);
+    if (k.startsWith('indice')) return;
+    const toolSubs = sec.subs.filter(s => s.lines.some(l => TOOL.test(l)));
+    if (toolSubs.length){ SEC.tareas = sec; toolSubs.forEach(s => CATS.push(s)); return; }
+    if (k.includes('elige')){ SEC.elige = sec; return; }
+    if (k.includes('rutas')){ SEC.rutas = sec; return; }
+    GUIDE.push(sec);
+  });
+  CATS.forEach((c, i) => {
+    c.i = i; c.h = Math.round(330 + i * 360 / CATS.length) % 360;
+    c.lines.forEach(l => { const t = parseTool(l); if (t){ t.ci = i; t.cat = c.title; t.h = c.h; TOOLS.push(t); } });
+    c.n = TOOLS.filter(t => t.ci === i).length;
+  });
+  TOOLS.forEach(t => { t.hay = norm([t.name, t.desc, t.ex, t.free, t.reg || '', t.cat, t.host].join(' ')); });
+  TOOLS.forEach(t => aliasesOf(t.name).forEach(a => ALIASES.push([a, t])));
+  ALIASES.sort((a, b) => b[0].length - a[0].length);
+
+  if (SEC.elige){
+    const rows = SEC.elige.lines.filter(l => /^\s*\|/.test(l));
+    ELIGE_LEAD = SEC.elige.lines.filter(l => l.trim() && !/^\s*\|/.test(l));
+    const dash = x => /^[—–-]?$/.test((x || '').trim()) ? '' : x.trim();
+    ELIGE = rows.slice(2).map(cells).map(c => ({need:c[0] || '', first:dash(c[1]), alt:dash(c[2])}))
+      .map(r => ({...r, hay:norm(r.need + ' ' + r.first + ' ' + r.alt)}));
+  }
+  if (SEC.rutas){
+    SEC.rutas.lines.forEach(l => {
+      const m = l.match(/^\s*(\d+)\.\s+(.*)$/);
+      if (!m){ if (l.trim()) RUTAS_LEAD.push(l); return; }
+      let body = m[2].trim(), title = '';
+      const b = body.match(/^\*\*(.+?)\*\*\s*(.*)$/);
+      if (b){ title = b[1].replace(/\.$/,''); body = b[2]; }
+      const steps = body.split(/\s*→\s*/).map(s => s.trim()).filter(Boolean);
+      RUTAS.push({n:m[1], title, steps, hay:norm(m[2])});
+    });
+  }
+  GUIDE.forEach((g, i) => { g.i = i; g.hay = norm(g.title + ' ' + g.lines.join(' ')); });
+}
+
+/* ---------- estado ----------
+   En el navegador solo se guardan tus favoritas; el resto empieza de cero. */
+const KEY = 'navaja-suiza-v1';
+const FAV = new Set();
+try { (JSON.parse(localStorage.getItem(KEY) || '{}').fav || []).forEach(x => FAV.add(x)); } catch(e){}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify({fav:[...FAV]})); } catch(e){} };
+const F = new Set();                 // filtros activos
+const OPEN = new Set(['fav', 'g0']); // grupos desplegados
+const VIEWS = ['tareas', 'elige', 'rutas', 'guia'];
+let view = 'tareas', query = '';
+
+/* ---------- plantillas ---------- */
+const chev = `<svg class="chev" width="11" height="11" viewBox="0 0 10 10" aria-hidden="true"><path d="M3.2 1L7 5 3.2 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const heart = on => `<svg width="18" height="18" viewBox="0 0 24 24" fill="${on ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.8-4.8-7.8-10.6A4.4 4.4 0 0 1 12 7.2a4.4 4.4 0 0 1 7.8 2.7c0 5.8-7.8 10.6-7.8 10.6z"/></svg>`;
+const arrow = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>`;
+
+function groupHTML(key, title, sub, color, body, force){
+  const on = force || OPEN.has(key);
+  return `<section class="group" id="g-${key}">
+    <button class="ghead${on ? ' on' : ''}" data-g="${key}" aria-expanded="${on}">
+      ${chev}${color ? `<span class="dot" style="background:${color}"></span>` : ''}
+      <span class="gt">${esc(title)}</span><em>${esc(sub)}</em>
+    </button>
+    ${on ? `<div class="gbody">${body()}</div>` : ''}
+  </section>`;
+}
+const fact = (k, v, cls) => `<div class="fact${cls ? ' ' + cls : ''}"><dt>${k}</dt><dd>${inline(cap(v))}</dd></div>`;
+function cardHTML(t){
+  const fav = FAV.has(t.id), tags = [], facts = [];
+  if (t.reg) tags.push(t.noreg ? '<span class="tag ok">Sin registro</span>' : '<span class="tag">Con registro</span>');
+  if (t.local) tags.push('<span class="tag loc" title="Trabaja en tu navegador: tus archivos no salen del equipo">Local</span>');
+  if (t.upload) tags.push('<span class="tag" title="Lo que añades se procesa o se guarda en servidores del proveedor">Sube archivos</span>');
+  if (t.unverified) tags.push('<span class="tag warn">Sin verificar</span>');
+  if (t.rev) tags.push(`<span class="tag">rev. ${esc(t.rev)}</span>`);
+  if (t.free) facts.push(fact('Gratis', t.free));
+  if (t.reg && !/^(no|sí|si)$/i.test(t.reg)) facts.push(fact('Registro', t.reg));
+  if (t.uploadNote) facts.push(fact('Archivos', t.uploadNote));
+  if (t.ex) facts.push(fact('Ejemplo', t.ex, 'ex'));
+  return `<article class="card${fav ? ' fav' : ''}">
+    <div class="chead">
+      <div class="cover" style="background:linear-gradient(145deg,hsl(${t.h} 72% 64%),hsl(${(t.h + 38) % 360} 76% 52%))" aria-hidden="true">${esc(initial(t.name))}</div>
+      <div class="cmeta">
+        <a class="cname" href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}${t.star ? '<span class="rec" title="Punto de partida recomendado"> ★</span>' : ''}</a>
+        <div class="csub">${esc(t.host)}</div>
+      </div>
+      <div class="cacts">
+        <button class="mk${fav ? ' on' : ''}" data-fav="${t.id}" aria-pressed="${fav}" aria-label="${fav ? 'Quitar de mis favoritas' : 'Añadir a mis favoritas'}">${heart(fav)}</button>
+        <a class="go" href="${esc(t.url)}" target="_blank" rel="noopener" aria-label="Abrir ${esc(t.name)}">${arrow}</a>
+      </div>
+    </div>
+    <p class="cdesc">${inline(cap(t.desc))}</p>
+    ${tags.length ? `<div class="tags">${tags.join('')}</div>` : ''}
+    ${facts.length ? `<dl class="facts">${facts.join('')}</dl>` : ''}
+  </article>`;
+}
+function suggestHref(){
+  const tpl = 'Herramienta:\nEnlace oficial:\nPara qué la usas:\nLímite gratuito y dónde lo has comprobado:\n';
+  return SUGGEST_EMAIL
+    ? 'mailto:' + SUGGEST_EMAIL + '?subject=' + encodeURIComponent('Propuesta para Navaja suiza') + '&body=' + encodeURIComponent(tpl.replace(/\n/g, '\r\n'))
+    : 'https://github.com/' + REPO + '/issues/new?title=' + encodeURIComponent('Propuesta: ') + '&body=' + encodeURIComponent(tpl);
+}
+function introHTML(){
+  const crit = GUIDE.find(g => norm(g.title).includes('criterio'));
+  const text = (DOC.intro.find(l => l.trim()) || '').trim();
+  return `<section class="intro">
+    ${text ? `<p>${inline(text)}</p>` : ''}
+    <div class="introacts">
+      <a class="suggest" href="${esc(suggestHref())}" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        <span>Sugerir herramienta</span></a>
+      ${crit ? `<a class="more in" href="#${esc(crit.slug)}" data-sec="${esc(crit.slug)}">${esc(crit.title)} ›</a>` : ''}
+    </div>
+  </section>`;
+}
+
+/* ---------- vistas ---------- */
+const passF = t => (!F.has('star') || t.star) && (!F.has('noreg') || t.noreg) && (!F.has('local') || t.local) && (!F.has('fav') || FAV.has(t.id));
+function viewTareas(){
+  const vis = TOOLS.filter(t => passF(t) && matchQ(t.hay));
+  if (!vis.length) return ['', 0];
+  const active = !!query.trim() || F.size > 0;
+  let h = active ? '' : introHTML();
+  const favs = vis.filter(t => FAV.has(t.id));
+  if (favs.length && !F.has('fav'))
+    h += groupHTML('fav', 'Mis favoritas', plural(favs.length, 'herramienta', 'herramientas'), 'var(--acc)', () => favs.map(cardHTML).join(''), false);
+  CATS.forEach(c => {
+    const list = vis.filter(t => t.ci === c.i);
+    if (list.length) h += groupHTML('c' + c.i, c.title, plural(list.length, 'herramienta', 'herramientas'),
+      `hsl(${c.h} 72% 62%)`, () => list.map(cardHTML).join(''), active);
+  });
+  return [h, vis.length];
+}
+function viewElige(){
+  const rows = ELIGE.filter(r => matchQ(r.hay));
+  if (!rows.length) return ['', 0];
+  const lead = ELIGE_LEAD.length && !query.trim() ? `<div class="lead">${md(ELIGE_LEAD)}</div>` : '';
+  return [lead + rows.map(r => `<article class="card pick">
+    <h3>${inline(r.need)}</h3>
+    <div class="pk"><span class="lbl first">Empieza por</span><span>${linkTools(r.first)}</span></div>
+    ${r.alt ? `<div class="pk"><span class="lbl">Si no te sirve</span><span>${linkTools(r.alt)}</span></div>` : ''}
+  </article>`).join(''), rows.length];
+}
+function viewRutas(){
+  const rs = RUTAS.filter(r => matchQ(r.hay));
+  if (!rs.length) return ['', 0];
+  const lead = RUTAS_LEAD.length && !query.trim() ? `<div class="lead">${md(RUTAS_LEAD)}</div>` : '';
+  return [lead + rs.map(r => `<article class="card route">
+    <div class="rhead"><span class="rn">${esc(r.n)}</span><h3>${inline(r.title || 'Ruta ' + r.n)}</h3></div>
+    <ol class="steps">${r.steps.map(s => `<li>${linkTools(s)}</li>`).join('')}</ol>
+  </article>`).join(''), rs.length];
+}
+function viewGuia(){
+  const gs = GUIDE.filter(g => matchQ(g.hay));
+  if (!gs.length) return ['', 0];
+  return [gs.map(g => groupHTML('g' + g.i, g.title, '', '', () => `<div class="prose">${md(g.lines)}</div>`, !!query.trim())).join(''), gs.length];
+}
+
+function countText(n){
+  const active = !!query.trim() || F.size > 0;
+  if (view === 'tareas') return active ? `${n} de ${plural(TOOLS.length, 'herramienta', 'herramientas')}`
+                                       : `${plural(TOOLS.length, 'herramienta', 'herramientas')} en ${CATS.length} tareas`;
+  if (view === 'elige') return plural(n, 'situación', 'situaciones') + (query.trim() ? ' encontradas' : '');
+  if (view === 'rutas') return plural(n, 'ruta de trabajo', 'rutas de trabajo');
+  return plural(n, 'apartado', 'apartados');
+}
+function emptyHTML(){
+  if (view === 'tareas' && F.has('fav') && !FAV.size)
+    return `<div class="empty">Aún no tienes favoritas.<br>Toca el corazón de una herramienta y aparecerá aquí, arriba del todo.<br><button data-clear="1">Ver todas</button></div>`;
+  const q = query.trim();
+  return `<div class="empty">Nada coincide${q ? ` con «<b>${esc(q)}</b>»` : ''}${view === 'tareas' && F.size ? ' con los filtros activos' : ''}.<br><button data-clear="1">Borrar búsqueda${view === 'tareas' && F.size ? ' y filtros' : ''}</button></div>`;
+}
+
+const measure = () => document.documentElement.style.setProperty('--stick', document.querySelector('header').offsetHeight + 'px');
+function render(toTop){
+  const [html, n] = {tareas:viewTareas, elige:viewElige, rutas:viewRutas, guia:viewGuia}[view]();
+  $('app').innerHTML = n ? html : emptyHTML();
+  $('count').textContent = n ? countText(n) : '';
+  const counts = {star:TOOLS.filter(t => t.star).length, noreg:TOOLS.filter(t => t.noreg).length, local:TOOLS.filter(t => t.local).length, fav:FAV.size};
+  document.querySelectorAll('#chips button').forEach(b => {
+    const f = b.dataset.f, on = F.has(f);
+    b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+    b.querySelector('em').textContent = counts[f];
+  });
+  $('chips').hidden = view !== 'tareas';
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.v === view));
+  measure();
+  if (toTop) window.scrollTo({top:0});
+}
+function setView(v){
+  view = v;
+  try { history.replaceState(null, '', v === 'tareas' ? location.pathname + location.search : '#' + v); } catch(e){}
+  render(true);
+}
+function scrollToEl(id){
+  const el = $(id); if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - document.querySelector('header').offsetHeight - 8;
+  window.scrollTo({top:Math.max(0, y)});
+}
+/* enlaces internos del README (#privacidad, #elige-rápido…) */
+function goto(s){
+  s = String(s).toLowerCase();
+  query = ''; $('q').value = ''; $('clearq').classList.remove('on');
+  if (SEC.elige && s === SEC.elige.slug) return setView('elige');
+  if (SEC.rutas && s === SEC.rutas.slug) return setView('rutas');
+  if (SEC.tareas && s === SEC.tareas.slug) return setView('tareas');
+  const c = CATS.find(c => c.slug === s);
+  if (c){ F.clear(); OPEN.add('c' + c.i); setView('tareas'); return scrollToEl('g-c' + c.i); }
+  const g = GUIDE.find(g => g.slug === s);
+  if (g){ OPEN.add('g' + g.i); setView('guia'); return scrollToEl('g-g' + g.i); }
+}
+
+/* ---------- eventos ---------- */
+function bind(){
+  const q = $('q');
+  q.addEventListener('input', () => { query = q.value; $('clearq').classList.toggle('on', !!query); render(true); });
+  q.addEventListener('keydown', e => { if (e.key === 'Enter') q.blur(); });
+  $('clearq').addEventListener('click', () => { q.value = ''; query = ''; $('clearq').classList.remove('on'); render(true); q.focus(); });
+  $('tabs').addEventListener('click', e => { const b = e.target.closest('button[data-v]'); if (b) setView(b.dataset.v); });
+  $('chips').addEventListener('click', e => {
+    const b = e.target.closest('button[data-f]'); if (!b) return;
+    F.has(b.dataset.f) ? F.delete(b.dataset.f) : F.add(b.dataset.f);
+    render(true);
+  });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[data-sec]');
+    if (a){ e.preventDefault(); goto(a.dataset.sec); return; }
+    const g = e.target.closest('[data-g]');
+    if (g){ const k = g.dataset.g; OPEN.has(k) ? OPEN.delete(k) : OPEN.add(k); render(false); return; }
+    const f = e.target.closest('[data-fav]');
+    if (f){ const id = f.dataset.fav; FAV.has(id) ? FAV.delete(id) : FAV.add(id); save(); render(false); return; }
+    if (e.target.closest('[data-clear]')){ F.clear(); q.value = ''; query = ''; $('clearq').classList.remove('on'); render(true); }
+  });
+  addEventListener('resize', measure);
+}
+
+function footer(){
+  $('foot').innerHTML = `${DOC.rev ? esc(DOC.rev) + '<br>' : ''}Todo el contenido sale de <a href="https://github.com/${esc(REPO)}#readme" target="_blank" rel="noopener">README.md en GitHub</a> · licencia CC0`;
+}
+
+/* ---------- arranque ---------- */
+bind();
+fetch(SOURCE, {cache:'no-cache'})
+  .then(r => { if (!r.ok) throw new Error('error ' + r.status); return r.text(); })
+  .then(text => {
+    build(text);
+    if (!TOOLS.length){
+      $('app').innerHTML = '<div class="empty">He leído <b>README.md</b>, pero no encuentro ninguna herramienta con el formato esperado. Revisa que cada línea empiece por «- [Nombre](https://…) — ».</div>';
+      return;
+    }
+    footer();
+    let h = location.hash.slice(1); try { h = decodeURIComponent(h); } catch(e){}
+    if (VIEWS.includes(h)) view = h;
+    render(false);
+    if (h && !VIEWS.includes(h)) goto(h);
+  })
+  .catch(err => {
+    $('app').innerHTML = `<div class="empty">No he podido leer <b>README.md</b> (${esc(err.message)}).<br>La página necesita ese archivo en la misma carpeta que index.html. Si acabas de publicar, espera un par de minutos y recarga.</div>`;
+  });
+</script>
+</body>
+</html>
