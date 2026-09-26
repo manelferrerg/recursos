@@ -11,21 +11,21 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
 - [Criterio de selección](#criterio-de-selección)
 - [Cómo leer cada línea](#cómo-leer-cada-línea)
 - [Herramientas por tarea](#herramientas-por-tarea)
-  - [Corrección y dudas lingüísticas](#corrección-y-dudas-lingüísticas)
-  - [Traducción](#traducción)
+  - [IA generativa](#ia-generativa)
+  - [Investigación y competencia](#investigación-y-competencia)
+  - [Bancos de imágenes, iconos y tipografías](#bancos-de-imágenes-iconos-y-tipografías)
   - [Diseño y color](#diseño-y-color)
   - [Mejorar y ampliar fotos](#mejorar-y-ampliar-fotos)
   - [Optimizar imágenes y GIF](#optimizar-imágenes-y-gif)
-  - [Bancos de imágenes, iconos y tipografías](#bancos-de-imágenes-iconos-y-tipografías)
+  - [Web y analítica](#web-y-analítica)
+  - [Formularios y organización](#formularios-y-organización)
+  - [Redes sociales](#redes-sociales)
+  - [Email marketing](#email-marketing)
+  - [QR, enlaces y campañas](#qr-enlaces-y-campañas)
+  - [Corrección y dudas lingüísticas](#corrección-y-dudas-lingüísticas)
+  - [Traducción](#traducción)
   - [PDF y documentos](#pdf-y-documentos)
   - [Vídeo y audio](#vídeo-y-audio)
-  - [IA generativa](#ia-generativa)
-  - [Redes sociales](#redes-sociales)
-  - [QR, enlaces y campañas](#qr-enlaces-y-campañas)
-  - [Formularios y organización](#formularios-y-organización)
-  - [Email marketing](#email-marketing)
-  - [Investigación y competencia](#investigación-y-competencia)
-  - [Web y analítica](#web-y-analítica)
 - [Rutas de trabajo](#rutas-de-trabajo)
 - [Fuera de la selección](#fuera-de-la-selección)
 - [Privacidad](#privacidad)
@@ -76,21 +76,33 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
 
 ## Herramientas por tarea
 
-### Corrección y dudas lingüísticas
+### IA generativa
 
-- ★ [Corrector de Softcatalà](https://www.softcatala.org/corrector/) — corrige ortografía, gramática y estilo en catalán, con formas generales, valencianas o baleares. Ejemplo: revisar la leyenda en catalán del menú mensual antes de maquetarla. Gratis: sin coste ni límite de extensión publicado; según su aviso, no guarda los textos · Registro: no
-- [LanguageTool](https://languagetool.org/es) — corrige ortografía y gramática en español, catalán y otros idiomas. Ejemplo: repasar el texto de un correo a las familias antes de enviarlo. Gratis: hasta 2000 caracteres por texto y 3 reformulaciones con IA al día; la extensión del navegador ya solo está en el plan de pago · Registro: no
-- [Optimot](https://optimot.gencat.cat/) — resuelve dudas de catalán con fichas y diccionarios de la Generalitat de Catalunya. Ejemplo: comprobar la forma correcta de un término antes de cerrar el texto de un cartel. Gratis: consulta pública sin coste · Registro: no
-- [DIEC2](https://dlc.iec.cat/) — diccionario normativo del catalán del Institut d'Estudis Catalans. Ejemplo: confirmar si una palabra del menú está recogida en el diccionario normativo. Gratis: consulta pública sin coste · Registro: no
-- [Cercaterm](https://www.termcat.cat/ca/cercaterm) — buscador de terminología especializada en catalán del TERMCAT. Ejemplo: encontrar la denominación catalana de un plato o de una técnica de cocina. Gratis: consulta pública sin coste · Registro: no
-- [Diccionario de la lengua española](https://dle.rae.es/) — diccionario normativo de la RAE y la ASALE. Ejemplo: comprobar el significado y la grafía de una palabra antes de publicar un texto corporativo. Gratis: consulta pública sin coste · Registro: no
-- [FundéuRAE](https://www.fundeu.es/) — recomendaciones sobre el uso del español en medios y redacción profesional. Ejemplo: resolver una duda de mayúsculas o de extranjerismos antes de enviar una nota de prensa. Gratis: consulta pública sin coste · Registro: no
+- [ChatGPT](https://chatgpt.com/) — asistente para redactar, resumir, analizar archivos y generar imágenes. Ejemplo: proponer cinco titulares para una campaña y elegir uno después de revisarlos. Gratis: funciones básicas con límites de uso que OpenAI no cuantifica · Registro: no para el chat básico; sí para el resto · Sube archivos
+- [Claude](https://claude.ai/) — asistente para redactar, revisar textos largos y analizar documentos. Ejemplo: revisar el tono de una carta a las familias antes de enviarla. Gratis: límites que se renuevan en ventanas de 5 horas y dependen de la longitud de la conversación · Registro: sí · Sube archivos
+- [Gemini](https://gemini.google.com/) — asistente de Google para redactar, resumir e investigar. Ejemplo: convertir las notas de una reunión en un calendario de publicaciones. Gratis: límites estándar que se renuevan cada 5 horas hasta un tope semanal · Registro: sí, con una cuenta de Google · Sube archivos
+- [Perplexity](https://www.perplexity.ai/) — busca en la web y responde citando las fuentes. Ejemplo: localizar un dato del sector y abrir la fuente original antes de usarlo en una presentación. Gratis: búsquedas básicas prácticamente ilimitadas y 3 búsquedas Pro al día; carga de archivos limitada · Registro: no para las búsquedas básicas · Sube archivos
+- [Gemini Notebook](https://notebook.google.com/) — antes NotebookLM; responde y resume solo a partir de las fuentes que le das. Ejemplo: cargar guías públicas sobre alimentación saludable y pedir un resumen con referencias a cada fuente. Gratis: hasta 50 fuentes por cuaderno, de hasta 500 000 palabras o 200 MB cada una; desde el 2 de septiembre de 2026, el uso se mide por consumo y se renueva cada 5 horas hasta un tope semanal · Registro: sí, con una cuenta de Google · Sube archivos
+- [Adobe Firefly](https://firefly.adobe.com/) — genera y edita imágenes con IA. Ejemplo: crear un fondo ilustrado para un cartel de temporada. Gratis: créditos que se renuevan cada mes desde el primer uso; Adobe no publica la cifra en su ayuda · Registro: sí · Sube archivos
+- [Bing Image Creator](https://www.bing.com/images/create) — genera imágenes a partir de una descripción. Ejemplo: explorar ideas visuales para una campaña antes de encargar la ilustración definitiva. Gratis: 15 creaciones rápidas al día; después sigue siendo gratis, a velocidad estándar · Registro: sí, con una cuenta personal de Microsoft
 
-### Traducción
+### Investigación y competencia
 
-- ★ [Traductor de Softcatalà](https://www.softcatala.org/traductor/) — traduce entre el catalán y el castellano, el inglés, el francés, el portugués y otras lenguas, con Apertium y un motor neuronal propio. Ejemplo: sacar un primer borrador en catalán de una circular escrita en castellano y revisarlo después. Gratis: sin coste; admite archivos .txt de hasta 8 MB con el resultado por correo; según su aviso, no guarda los textos · Registro: no
-- [DeepL](https://www.deepl.com/translator) — traduce textos y documentos manteniendo el formato. Ejemplo: traducir al inglés la presentación de un proyecto para un proveedor. Gratis: 50 000 caracteres al mes y 1 archivo al mes de hasta 5 MB · Registro: no para traducir texto · Sube archivos
-- [Google Translate](https://translate.google.com/) — traduce texto, páginas web y documentos. Ejemplo: entender un PDF recibido en otro idioma sin reescribirlo. Gratis: documentos .docx, .pdf, .pptx y .xlsx de hasta 10 MB; los PDF, de hasta 300 páginas · Registro: no · Sube archivos
+- ★ [Google Trends](https://trends.google.com/trends/) — compara el interés de búsqueda de varios términos por región y periodo. Ejemplo: ver si en Cataluña se busca más «comedor escolar» o «menjador escolar» antes de redactar una campaña. Gratis: sin coste; da un índice relativo de 0 a 100, no volúmenes de búsqueda · Registro: no
+- [AnswerThePublic](https://answerthepublic.com/) — reúne las preguntas que la gente hace en buscadores sobre un tema. Ejemplo: descubrir qué preguntan las familias sobre el comedor escolar para preparar unas preguntas frecuentes. Gratis: 3 búsquedas al día · Registro: sí
+- [Google Alerts](https://www.google.com/alerts) — avisa por correo cuando aparecen resultados nuevos sobre los términos que elijas. Ejemplo: recibir un aviso cuando un medio mencione a tu empresa o a la competencia. Gratis: sin coste · Registro: sí, con una cuenta de Google
+- [Meta Ad Library](https://www.facebook.com/ads/library/) — muestra los anuncios activos en Facebook e Instagram de cualquier anunciante. Ejemplo: ver qué mensajes y formatos usa la competencia antes de planificar una campaña. Gratis: consulta pública sin coste · Registro: no
+- [Google Ads Transparency Center](https://adstransparency.google.com/) — muestra los anuncios publicados a través de Google por anunciante o dominio. Ejemplo: comprobar si un competidor hace campañas en el buscador o en YouTube. Gratis: consulta pública sin coste · Registro: no
+- [Soy de temporada](https://soydetemporada.es/) — calendario de temporada de 53 frutas, verduras y otros productos de la península. Ejemplo: confirmar en qué meses es de temporada una fruta antes de diseñar un cartel. Gratis: consulta pública; es un proyecto ciudadano con licencia CC BY-NC 4.0, así que sus textos e ilustraciones no se pueden reutilizar con fines comerciales · Registro: no
+
+### Bancos de imágenes, iconos y tipografías
+
+- ★ [Pexels](https://www.pexels.com/) — fotos y vídeos de uso libre. Ejemplo: buscar una foto vertical de fruta de temporada para una historia de Instagram. Gratis: uso comercial sin atribución; no se pueden vender copias sin modificar ni dar a entender que las personas o marcas de la imagen respaldan tu producto · Registro: no
+- [Unsplash](https://unsplash.com/) — fotos de uso libre en alta resolución. Ejemplo: ilustrar una entrada de blog sobre alimentación de otoño. Gratis: uso comercial sin atribución obligatoria; las imágenes Unsplash+ tienen una licencia de pago distinta · Registro: no
+- [Pixabay](https://pixabay.com/) — fotos, ilustraciones, vídeos, música y efectos de sonido. Ejemplo: encontrar una música de fondo libre de derechos para un vídeo corto. Gratis: uso sin atribución; no se puede revender el contenido tal cual ni usarlo de forma engañosa · Registro: sí, para descargar a resolución completa
+- [unDraw](https://undraw.co/) — ilustraciones vectoriales con el color de acento que elijas. Ejemplo: ilustrar una presentación para proveedores sin recurrir a fotos de personas. Gratis: uso comercial sin atribución; no se permite redistribuirlas en paquetes ni usarlas para entrenar IA · Registro: no
+- [Material Symbols](https://fonts.google.com/icons) — iconos de Google en SVG, PNG o como fuente. Ejemplo: poner iconos de calendario, teléfono y ubicación en la cabecera de una circular. Gratis: licencia Apache 2.0, que permite el uso comercial · Registro: no
+- ★ [Google Fonts](https://fonts.google.com/) — catálogo de tipografías con licencia abierta. Ejemplo: elegir una tipografía legible para menús impresos y para la web. Gratis: la mayoría usa la SIL Open Font License, que permite el uso comercial; revisa la licencia de cada familia · Registro: no
 
 ### Diseño y color
 
@@ -111,14 +123,54 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
 - [TinyPNG](https://tinypng.com/) — comprime por lotes imágenes JPG, PNG, WebP y AVIF. Ejemplo: aligerar las fotos de una galería antes de publicarla. Gratis: hasta 20 imágenes por tanda y 5 MB por imagen · Registro: no · Sube archivos
 - [ezgif](https://ezgif.com/) — crea, recorta, optimiza y convierte GIF, WebP y vídeos cortos. Ejemplo: convertir un clip de pocos segundos en un GIF ligero para una newsletter. Gratis: sin coste; hasta 200 MB por archivo en la conversión de vídeo a GIF · Registro: no · Sube archivos
 
-### Bancos de imágenes, iconos y tipografías
+### Web y analítica
 
-- ★ [Pexels](https://www.pexels.com/) — fotos y vídeos de uso libre. Ejemplo: buscar una foto vertical de fruta de temporada para una historia de Instagram. Gratis: uso comercial sin atribución; no se pueden vender copias sin modificar ni dar a entender que las personas o marcas de la imagen respaldan tu producto · Registro: no
-- [Unsplash](https://unsplash.com/) — fotos de uso libre en alta resolución. Ejemplo: ilustrar una entrada de blog sobre alimentación de otoño. Gratis: uso comercial sin atribución obligatoria; las imágenes Unsplash+ tienen una licencia de pago distinta · Registro: no
-- [Pixabay](https://pixabay.com/) — fotos, ilustraciones, vídeos, música y efectos de sonido. Ejemplo: encontrar una música de fondo libre de derechos para un vídeo corto. Gratis: uso sin atribución; no se puede revender el contenido tal cual ni usarlo de forma engañosa · Registro: sí, para descargar a resolución completa
-- [unDraw](https://undraw.co/) — ilustraciones vectoriales con el color de acento que elijas. Ejemplo: ilustrar una presentación para proveedores sin recurrir a fotos de personas. Gratis: uso comercial sin atribución; no se permite redistribuirlas en paquetes ni usarlas para entrenar IA · Registro: no
-- [Material Symbols](https://fonts.google.com/icons) — iconos de Google en SVG, PNG o como fuente. Ejemplo: poner iconos de calendario, teléfono y ubicación en la cabecera de una circular. Gratis: licencia Apache 2.0, que permite el uso comercial · Registro: no
-- ★ [Google Fonts](https://fonts.google.com/) — catálogo de tipografías con licencia abierta. Ejemplo: elegir una tipografía legible para menús impresos y para la web. Gratis: la mayoría usa la SIL Open Font License, que permite el uso comercial; revisa la licencia de cada familia · Registro: no
+- [PageSpeed Insights](https://pagespeed.web.dev/) — mide la velocidad y la experiencia de una página en móvil y en ordenador. Ejemplo: comprobar que la página a la que lleva un QR carga bien en el móvil. Gratis: sin coste para cualquier URL pública · Registro: no
+- [Google Search Console](https://search.google.com/search-console/about) — muestra con qué búsquedas aparece tu web en Google, sus clics y los problemas de indexación. Ejemplo: ver qué búsquedas llevan a la página del menú. Gratis: sin coste; hay que verificar la propiedad del sitio, normalmente con ayuda de quien gestiona la web · Registro: sí, con una cuenta de Google
+- [Google Analytics](https://analytics.google.com/) — mide visitas, recorridos y conversiones de una web. Ejemplo: comparar las visitas que llegan desde el QR de un cartel con las que llegan desde Instagram. Gratis: versión estándar sin coste; necesita instalar su etiqueta y un aviso de cookies con consentimiento · Registro: sí, con una cuenta de Google
+- [Microsoft Clarity](https://clarity.microsoft.com/) — mapas de calor y grabaciones de sesión de una web. Ejemplo: ver hasta dónde bajan los visitantes en la página de un menú. Gratis: sin coste ni límites de tráfico, según Microsoft; en el EEE, el Reino Unido y Suiza hay que transmitirle el consentimiento del visitante · Registro: sí
+- [Looker Studio](https://lookerstudio.google.com/) — crea informes y paneles con datos de otras herramientas. Ejemplo: montar un informe mensual con los datos de Analytics y Search Console para dirección. Gratis: versión estándar sin coste; existe una versión Pro de pago y algunos conectores de terceros cobran · Registro: sí, con una cuenta de Google
+
+### Formularios y organización
+
+- ★ [Google Forms](https://forms.google.com/) — crea formularios y encuestas con las respuestas en una hoja de cálculo. Ejemplo: recoger el brief de un encargo de diseño: qué pieza, para cuándo y con qué textos. Gratis: sin coste con una cuenta de Google · Registro: sí
+- [Tally](https://tally.so/) — formularios con lógica condicional y aspecto de documento. Ejemplo: un formulario de inscripción a una jornada que muestra preguntas distintas según el centro. Gratis: formularios y respuestas ilimitados dentro de su política de uso razonable; quitar la marca Tally es de pago · Registro: sí
+- [Trello](https://trello.com/) — tableros con listas y tarjetas para seguir tareas. Ejemplo: mover cada encargo entre «pendiente», «en diseño», «en revisión» y «aprobado». Gratis: hasta 10 tableros abiertos y 10 colaboradores por espacio de trabajo; adjuntos de hasta 10 MB; 250 automatizaciones al mes · Registro: sí · Sube archivos
+- [Notion](https://www.notion.com/) — páginas y bases de datos para documentar procesos y calendarios. Ejemplo: mantener el calendario editorial del trimestre con el estado de cada pieza. Gratis: bloques ilimitados para uso individual; archivos de hasta 5 MB, 7 días de historial y hasta 10 invitados · Registro: sí · Sube archivos
+- [Miro](https://miro.com/) — pizarra colaborativa para planificar campañas, flujos y tareas. Ejemplo: dibujar con el equipo las fases de la campaña de inicio de curso. Gratis: 3 tableros editables (los tres más recientes) y 10 créditos de IA al mes · Registro: sí · Sube archivos
+
+### Redes sociales
+
+- ★ [Meta Business Suite](https://business.facebook.com/) — publica y programa publicaciones e historias de Facebook e Instagram y muestra sus estadísticas. Ejemplo: dejar programadas el viernes las publicaciones de la semana siguiente. Gratis: herramienta de Meta sin coste · Registro: sí, con la página de Facebook y la cuenta profesional de Instagram vinculadas
+- [Buffer](https://buffer.com/) — programa publicaciones en varias redes, LinkedIn y X incluidas. Ejemplo: dejar programadas las publicaciones de la página de empresa en LinkedIn para toda la semana. Gratis: 3 canales conectados a la vez (8 distintos en toda la vida de la cuenta), 10 publicaciones programadas por canal y 1 usuario · Registro: sí · Sube archivos
+- [Metricool](https://metricool.com/) — planifica publicaciones en varias redes y reúne su analítica. Ejemplo: comparar el alcance de las publicaciones en catalán y en castellano del último mes. Gratis: 1 marca, 20 publicaciones programadas al mes, 30 días de analítica y 5 créditos de IA al mes; LinkedIn y X no entran en el plan gratuito · Registro: sí
+
+### Email marketing
+
+- [Mailrelay](https://mailrelay.com/) — envía newsletters y campañas con automatizaciones y soporte en español. Ejemplo: enviar el boletín trimestral a una lista de contactos que ha dado su consentimiento. Gratis: plan permanente de hasta 80 000 emails al mes y 20 000 contactos, sin tarjeta · Registro: sí · Sube archivos
+- [Brevo](https://www.brevo.com/es/) — envía campañas de email y gestiona contactos. Ejemplo: enviar una invitación a una jornada a unos cientos de contactos repartiendo los envíos en varios días. Gratis: 300 emails al día, que no se acumulan, y hasta 100 000 contactos; sin tarjeta ni límite de tiempo · Registro: sí · Sube archivos
+
+### QR, enlaces y campañas
+
+- ★ [QRCode Monkey](https://www.qrcode-monkey.com/) — genera códigos QR estáticos con colores y logotipo, en PNG o en formatos vectoriales para imprenta (SVG, PDF y EPS). Ejemplo: crear el QR que lleva del cartel del comedor a la página del menú en la web, que no cambia de dirección cada mes. Gratis: QR sin caducidad ni límite de escaneos, también para uso comercial; el destino no se puede cambiar después de imprimir · Registro: no · Sube archivos, solo si añades un logotipo (hasta 2 MB; lo guarda en caché 24 horas)
+- [TinyURL](https://tinyurl.com/) — acorta enlaces largos. Ejemplo: convertir la dirección de un formulario en un enlace corto para una presentación. Gratis: los enlaces no caducan; la analítica de clics es de pago · Registro: no para acortar
+- [Campaign URL Builder](https://ga-dev-tools.web.app/ga4/campaign-url-builder/) — añade parámetros UTM a un enlace para que Google Analytics sepa de qué campaña llega cada visita. Ejemplo: etiquetar el enlace del QR de un cartel con `utm_source=cartel` y `utm_medium=qr`. Gratis: sin coste; rellena siempre fuente, medio y campaña · Registro: no
+
+### Corrección y dudas lingüísticas
+
+- ★ [Corrector de Softcatalà](https://www.softcatala.org/corrector/) — corrige ortografía, gramática y estilo en catalán, con formas generales, valencianas o baleares. Ejemplo: revisar la leyenda en catalán del menú mensual antes de maquetarla. Gratis: sin coste ni límite de extensión publicado; según su aviso, no guarda los textos · Registro: no
+- [LanguageTool](https://languagetool.org/es) — corrige ortografía y gramática en español, catalán y otros idiomas. Ejemplo: repasar el texto de un correo a las familias antes de enviarlo. Gratis: hasta 2000 caracteres por texto y 3 reformulaciones con IA al día; la extensión del navegador ya solo está en el plan de pago · Registro: no
+- [Optimot](https://optimot.gencat.cat/) — resuelve dudas de catalán con fichas y diccionarios de la Generalitat de Catalunya. Ejemplo: comprobar la forma correcta de un término antes de cerrar el texto de un cartel. Gratis: consulta pública sin coste · Registro: no
+- [DIEC2](https://dlc.iec.cat/) — diccionario normativo del catalán del Institut d'Estudis Catalans. Ejemplo: confirmar si una palabra del menú está recogida en el diccionario normativo. Gratis: consulta pública sin coste · Registro: no
+- [Cercaterm](https://www.termcat.cat/ca/cercaterm) — buscador de terminología especializada en catalán del TERMCAT. Ejemplo: encontrar la denominación catalana de un plato o de una técnica de cocina. Gratis: consulta pública sin coste · Registro: no
+- [Diccionario de la lengua española](https://dle.rae.es/) — diccionario normativo de la RAE y la ASALE. Ejemplo: comprobar el significado y la grafía de una palabra antes de publicar un texto corporativo. Gratis: consulta pública sin coste · Registro: no
+- [FundéuRAE](https://www.fundeu.es/) — recomendaciones sobre el uso del español en medios y redacción profesional. Ejemplo: resolver una duda de mayúsculas o de extranjerismos antes de enviar una nota de prensa. Gratis: consulta pública sin coste · Registro: no
+
+### Traducción
+
+- ★ [Traductor de Softcatalà](https://www.softcatala.org/traductor/) — traduce entre el catalán y el castellano, el inglés, el francés, el portugués y otras lenguas, con Apertium y un motor neuronal propio. Ejemplo: sacar un primer borrador en catalán de una circular escrita en castellano y revisarlo después. Gratis: sin coste; admite archivos .txt de hasta 8 MB con el resultado por correo; según su aviso, no guarda los textos · Registro: no
+- [DeepL](https://www.deepl.com/translator) — traduce textos y documentos manteniendo el formato. Ejemplo: traducir al inglés la presentación de un proyecto para un proveedor. Gratis: 50 000 caracteres al mes y 1 archivo al mes de hasta 5 MB · Registro: no para traducir texto · Sube archivos
+- [Google Translate](https://translate.google.com/) — traduce texto, páginas web y documentos. Ejemplo: entender un PDF recibido en otro idioma sin reescribirlo. Gratis: documentos .docx, .pdf, .pptx y .xlsx de hasta 10 MB; los PDF, de hasta 300 páginas · Registro: no · Sube archivos
 
 ### PDF y documentos
 
@@ -131,58 +183,6 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
 - ★ [Adobe Podcast](https://podcast.adobe.com/) — su función Enhance Speech limpia y mejora grabaciones de voz. Ejemplo: quitar eco y ruido a una entrevista grabada con el móvil. Gratis: archivos de hasta 30 minutos y 500 MB, y 1 hora de audio mejorado al día · Registro: sí · Sube archivos
 - [123apps](https://123apps.com/) — corta, convierte y ajusta audio y vídeo desde el navegador. Ejemplo: recortar una música de fondo a 15 segundos para un reel. Gratis: 5 archivos al día de hasta 500 MB, con publicidad · Registro: no · Sube archivos
 - [AudioMass](https://audiomass.co/) — editor de audio de código abierto: corta, normaliza y ecualiza. Ejemplo: subir el volumen de una locución y quitar los silencios del principio. Gratis: sin coste ni cuenta · Registro: no · Local
-
-### IA generativa
-
-- [ChatGPT](https://chatgpt.com/) — asistente para redactar, resumir, analizar archivos y generar imágenes. Ejemplo: proponer cinco titulares para una campaña y elegir uno después de revisarlos. Gratis: funciones básicas con límites de uso que OpenAI no cuantifica · Registro: no para el chat básico; sí para el resto · Sube archivos
-- [Claude](https://claude.ai/) — asistente para redactar, revisar textos largos y analizar documentos. Ejemplo: revisar el tono de una carta a las familias antes de enviarla. Gratis: límites que se renuevan en ventanas de 5 horas y dependen de la longitud de la conversación · Registro: sí · Sube archivos
-- [Gemini](https://gemini.google.com/) — asistente de Google para redactar, resumir e investigar. Ejemplo: convertir las notas de una reunión en un calendario de publicaciones. Gratis: límites estándar que se renuevan cada 5 horas hasta un tope semanal · Registro: sí, con una cuenta de Google · Sube archivos
-- [Perplexity](https://www.perplexity.ai/) — busca en la web y responde citando las fuentes. Ejemplo: localizar un dato del sector y abrir la fuente original antes de usarlo en una presentación. Gratis: búsquedas básicas prácticamente ilimitadas y 3 búsquedas Pro al día; carga de archivos limitada · Registro: no para las búsquedas básicas · Sube archivos
-- [Gemini Notebook](https://notebook.google.com/) — antes NotebookLM; responde y resume solo a partir de las fuentes que le das. Ejemplo: cargar guías públicas sobre alimentación saludable y pedir un resumen con referencias a cada fuente. Gratis: hasta 50 fuentes por cuaderno, de hasta 500 000 palabras o 200 MB cada una; desde el 2 de septiembre de 2026, el uso se mide por consumo y se renueva cada 5 horas hasta un tope semanal · Registro: sí, con una cuenta de Google · Sube archivos
-- [Adobe Firefly](https://firefly.adobe.com/) — genera y edita imágenes con IA. Ejemplo: crear un fondo ilustrado para un cartel de temporada. Gratis: créditos que se renuevan cada mes desde el primer uso; Adobe no publica la cifra en su ayuda · Registro: sí · Sube archivos
-- [Bing Image Creator](https://www.bing.com/images/create) — genera imágenes a partir de una descripción. Ejemplo: explorar ideas visuales para una campaña antes de encargar la ilustración definitiva. Gratis: 15 creaciones rápidas al día; después sigue siendo gratis, a velocidad estándar · Registro: sí, con una cuenta personal de Microsoft
-
-### Redes sociales
-
-- ★ [Meta Business Suite](https://business.facebook.com/) — publica y programa publicaciones e historias de Facebook e Instagram y muestra sus estadísticas. Ejemplo: dejar programadas el viernes las publicaciones de la semana siguiente. Gratis: herramienta de Meta sin coste · Registro: sí, con la página de Facebook y la cuenta profesional de Instagram vinculadas
-- [Buffer](https://buffer.com/) — programa publicaciones en varias redes, LinkedIn y X incluidas. Ejemplo: dejar programadas las publicaciones de la página de empresa en LinkedIn para toda la semana. Gratis: 3 canales conectados a la vez (8 distintos en toda la vida de la cuenta), 10 publicaciones programadas por canal y 1 usuario · Registro: sí · Sube archivos
-- [Metricool](https://metricool.com/) — planifica publicaciones en varias redes y reúne su analítica. Ejemplo: comparar el alcance de las publicaciones en catalán y en castellano del último mes. Gratis: 1 marca, 20 publicaciones programadas al mes, 30 días de analítica y 5 créditos de IA al mes; LinkedIn y X no entran en el plan gratuito · Registro: sí
-
-### QR, enlaces y campañas
-
-- ★ [QRCode Monkey](https://www.qrcode-monkey.com/) — genera códigos QR estáticos con colores y logotipo, en PNG o en formatos vectoriales para imprenta (SVG, PDF y EPS). Ejemplo: crear el QR que lleva del cartel del comedor a la página del menú en la web, que no cambia de dirección cada mes. Gratis: QR sin caducidad ni límite de escaneos, también para uso comercial; el destino no se puede cambiar después de imprimir · Registro: no · Sube archivos, solo si añades un logotipo (hasta 2 MB; lo guarda en caché 24 horas)
-- [TinyURL](https://tinyurl.com/) — acorta enlaces largos. Ejemplo: convertir la dirección de un formulario en un enlace corto para una presentación. Gratis: los enlaces no caducan; la analítica de clics es de pago · Registro: no para acortar
-- [Campaign URL Builder](https://ga-dev-tools.web.app/ga4/campaign-url-builder/) — añade parámetros UTM a un enlace para que Google Analytics sepa de qué campaña llega cada visita. Ejemplo: etiquetar el enlace del QR de un cartel con `utm_source=cartel` y `utm_medium=qr`. Gratis: sin coste; rellena siempre fuente, medio y campaña · Registro: no
-
-### Formularios y organización
-
-- ★ [Google Forms](https://forms.google.com/) — crea formularios y encuestas con las respuestas en una hoja de cálculo. Ejemplo: recoger el brief de un encargo de diseño: qué pieza, para cuándo y con qué textos. Gratis: sin coste con una cuenta de Google · Registro: sí
-- [Tally](https://tally.so/) — formularios con lógica condicional y aspecto de documento. Ejemplo: un formulario de inscripción a una jornada que muestra preguntas distintas según el centro. Gratis: formularios y respuestas ilimitados dentro de su política de uso razonable; quitar la marca Tally es de pago · Registro: sí
-- [Trello](https://trello.com/) — tableros con listas y tarjetas para seguir tareas. Ejemplo: mover cada encargo entre «pendiente», «en diseño», «en revisión» y «aprobado». Gratis: hasta 10 tableros abiertos y 10 colaboradores por espacio de trabajo; adjuntos de hasta 10 MB; 250 automatizaciones al mes · Registro: sí · Sube archivos
-- [Notion](https://www.notion.com/) — páginas y bases de datos para documentar procesos y calendarios. Ejemplo: mantener el calendario editorial del trimestre con el estado de cada pieza. Gratis: bloques ilimitados para uso individual; archivos de hasta 5 MB, 7 días de historial y hasta 10 invitados · Registro: sí · Sube archivos
-- [Miro](https://miro.com/) — pizarra colaborativa para planificar campañas, flujos y tareas. Ejemplo: dibujar con el equipo las fases de la campaña de inicio de curso. Gratis: 3 tableros editables (los tres más recientes) y 10 créditos de IA al mes · Registro: sí · Sube archivos
-
-### Email marketing
-
-- [Mailrelay](https://mailrelay.com/) — envía newsletters y campañas con automatizaciones y soporte en español. Ejemplo: enviar el boletín trimestral a una lista de contactos que ha dado su consentimiento. Gratis: plan permanente de hasta 80 000 emails al mes y 20 000 contactos, sin tarjeta · Registro: sí · Sube archivos
-- [Brevo](https://www.brevo.com/es/) — envía campañas de email y gestiona contactos. Ejemplo: enviar una invitación a una jornada a unos cientos de contactos repartiendo los envíos en varios días. Gratis: 300 emails al día, que no se acumulan, y hasta 100 000 contactos; sin tarjeta ni límite de tiempo · Registro: sí · Sube archivos
-
-### Investigación y competencia
-
-- ★ [Google Trends](https://trends.google.com/trends/) — compara el interés de búsqueda de varios términos por región y periodo. Ejemplo: ver si en Cataluña se busca más «comedor escolar» o «menjador escolar» antes de redactar una campaña. Gratis: sin coste; da un índice relativo de 0 a 100, no volúmenes de búsqueda · Registro: no
-- [AnswerThePublic](https://answerthepublic.com/) — reúne las preguntas que la gente hace en buscadores sobre un tema. Ejemplo: descubrir qué preguntan las familias sobre el comedor escolar para preparar unas preguntas frecuentes. Gratis: 3 búsquedas al día · Registro: sí
-- [Google Alerts](https://www.google.com/alerts) — avisa por correo cuando aparecen resultados nuevos sobre los términos que elijas. Ejemplo: recibir un aviso cuando un medio mencione a tu empresa o a la competencia. Gratis: sin coste · Registro: sí, con una cuenta de Google
-- [Meta Ad Library](https://www.facebook.com/ads/library/) — muestra los anuncios activos en Facebook e Instagram de cualquier anunciante. Ejemplo: ver qué mensajes y formatos usa la competencia antes de planificar una campaña. Gratis: consulta pública sin coste · Registro: no
-- [Google Ads Transparency Center](https://adstransparency.google.com/) — muestra los anuncios publicados a través de Google por anunciante o dominio. Ejemplo: comprobar si un competidor hace campañas en el buscador o en YouTube. Gratis: consulta pública sin coste · Registro: no
-- [Soy de temporada](https://soydetemporada.es/) — calendario de temporada de 53 frutas, verduras y otros productos de la península. Ejemplo: confirmar en qué meses es de temporada una fruta antes de diseñar un cartel. Gratis: consulta pública; es un proyecto ciudadano con licencia CC BY-NC 4.0, así que sus textos e ilustraciones no se pueden reutilizar con fines comerciales · Registro: no
-
-### Web y analítica
-
-- [PageSpeed Insights](https://pagespeed.web.dev/) — mide la velocidad y la experiencia de una página en móvil y en ordenador. Ejemplo: comprobar que la página a la que lleva un QR carga bien en el móvil. Gratis: sin coste para cualquier URL pública · Registro: no
-- [Google Search Console](https://search.google.com/search-console/about) — muestra con qué búsquedas aparece tu web en Google, sus clics y los problemas de indexación. Ejemplo: ver qué búsquedas llevan a la página del menú. Gratis: sin coste; hay que verificar la propiedad del sitio, normalmente con ayuda de quien gestiona la web · Registro: sí, con una cuenta de Google
-- [Google Analytics](https://analytics.google.com/) — mide visitas, recorridos y conversiones de una web. Ejemplo: comparar las visitas que llegan desde el QR de un cartel con las que llegan desde Instagram. Gratis: versión estándar sin coste; necesita instalar su etiqueta y un aviso de cookies con consentimiento · Registro: sí, con una cuenta de Google
-- [Microsoft Clarity](https://clarity.microsoft.com/) — mapas de calor y grabaciones de sesión de una web. Ejemplo: ver hasta dónde bajan los visitantes en la página de un menú. Gratis: sin coste ni límites de tráfico, según Microsoft; en el EEE, el Reino Unido y Suiza hay que transmitirle el consentimiento del visitante · Registro: sí
-- [Looker Studio](https://lookerstudio.google.com/) — crea informes y paneles con datos de otras herramientas. Ejemplo: montar un informe mensual con los datos de Analytics y Search Console para dirección. Gratis: versión estándar sin coste; existe una versión Pro de pago y algunos conectores de terceros cobran · Registro: sí, con una cuenta de Google
 
 ## Rutas de trabajo
 
