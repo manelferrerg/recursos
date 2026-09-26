@@ -14,6 +14,7 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
   - [Corrección y dudas lingüísticas](#corrección-y-dudas-lingüísticas)
   - [Traducción](#traducción)
   - [Diseño y color](#diseño-y-color)
+  - [Mejorar y ampliar fotos](#mejorar-y-ampliar-fotos)
   - [Optimizar imágenes y GIF](#optimizar-imágenes-y-gif)
   - [Bancos de imágenes, iconos y tipografías](#bancos-de-imágenes-iconos-y-tipografías)
   - [PDF y documentos](#pdf-y-documentos)
@@ -42,6 +43,7 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
 | Traducir un documento conservando el formato | DeepL | Google Translate |
 | Diseñar una pieza | Canva | Photopea, si tienes un PSD |
 | Quitar el fondo de una foto | Adobe Express | — |
+| Ampliar o limpiar una foto pequeña | unlimited:waifu2x, sin subirla | Clipdrop, si además hay que borrar un objeto o corregir la luz |
 | Comprobar que un texto se lee sobre un color | WebAIM Contrast Checker | — |
 | Aligerar una imagen | Squoosh, sin subirla | TinyPNG, para lotes |
 | Unir, comprimir o convertir un PDF | PDF24 Tools | iLovePDF |
@@ -96,6 +98,12 @@ Revisado el 24 de septiembre de 2026 · Próxima revisión: diciembre de 2026
 - ★ [Photopea](https://www.photopea.com/) — edita PSD, capas y máscaras en el navegador, con un funcionamiento parecido al de Photoshop. Ejemplo: abrir el PSD de un cartel y cambiar la fecha y el texto sin tener Photoshop a mano. Gratis: editor utilizable sin pagar, con publicidad · Registro: no · Local
 - [Adobe Express](https://www.adobe.com/express/) — crea diseños y vídeos cortos con plantillas, y quita fondos en un clic. Ejemplo: quitar el fondo de la foto de un plato para colocarlo sobre el color corporativo. Gratis: 5 GB de almacenamiento; quitar fondos y generar con IA tienen un cupo diario; sin tarjeta · Registro: sí · Sube archivos
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) — calcula el contraste entre el color del texto y el del fondo según las pautas de accesibilidad WCAG. Ejemplo: comprobar si el texto blanco sobre el color corporativo se lee bien en un cartel o en la web. Gratis: sin coste; el nivel AA pide 4,5:1 para texto normal y 3:1 para texto grande · Registro: no
+
+### Mejorar y ampliar fotos
+
+- ★ [unlimited:waifu2x](https://unlimited.waifu2x.net/) — amplía fotos a 2x o, según el modelo, a 4x y les quita ruido y artefactos de compresión, con un modelo propio para fotografía; es la versión experimental de waifu2x que funciona dentro del navegador. Ejemplo: agrandar una foto pequeña recibida por WhatsApp para que no se vea pixelada en un cartel. Gratis: sin coste ni cuenta; cuatro niveles de reducción de ruido; va más rápido si el navegador admite WebGPU; con publicidad; según su política de privacidad, las imágenes no salen del navegador · Registro: no · Local
+- [Clipdrop](https://clipdrop.co/image-upscaler) — amplía al doble y quita ruido y artefactos de compresión; en la misma web, Cleanup borra objetos y Relight corrige la luz. Ejemplo: limpiar el ruido de la foto de un plato hecha en una cocina con poca luz antes de publicarla en Instagram. Gratis: 20 ampliaciones x2 cada 24 horas, sin alta resolución, y 20 usos diarios de Cleanup y de Relight; x4 y superiores son de pago; según su FAQ, sus condiciones no limitan el uso comercial · Registro: [sin verificar] · Sube archivos
+- [iLoveIMG](https://www.iloveimg.com/upscale-image) — amplía imágenes a 2x o 4x con IA; es de la misma empresa que iLovePDF. Ejemplo: agrandar la foto pequeña de un producto que envía un proveedor para usarla en una presentación. Gratis: 1 imagen por tarea, de hasta 6 MB y menos de 6 megapíxeles; no publica cupo diario ni aclara si la ampliación x4 entra en el plan gratuito [sin verificar] · Registro: no · Sube archivos
 
 ### Optimizar imágenes y GIF
 
@@ -198,6 +206,9 @@ Herramientas revisadas que no entran, y por qué. Evita volver a evaluarlas en c
 | Bitly | 5 enlaces y 2 QR al mes, sin analítica de clics en el plan gratuito |
 | Gamma | Da 400 créditos al registrarse que no se renuevan: es una prueba |
 | CapCut | Sus condiciones de 2025 le conceden una licencia amplia y perpetua sobre el contenido que subes |
+| Upscale.media | Sus condiciones limitan el servicio a un uso personal y no comercial, y le conceden una licencia amplia y sublicenciable sobre las imágenes que subes |
+| Let's Enhance | Da 10 créditos al registrarse que no se renuevan, y las imágenes gratuitas llevan marca de agua: es una prueba |
+| Upscayl | Es una aplicación de escritorio: hay que instalarla |
 | Google Ads Keyword Planner | Exige introducir datos de facturación para usar sus funciones básicas |
 | Hemingway Editor | Solo analiza textos en inglés |
 | Apertium | El Traductor de Softcatalà ya lo incorpora |
@@ -222,7 +233,9 @@ Herramientas revisadas que no entran, y por qué. Evita volver a evaluarlas en c
 
 **Imágenes y licencias.** Una licencia gratuita no te exime de revisar los derechos de imagen: evita en piezas comerciales las fotos con personas reconocibles, y en especial con menores, si no tienes su autorización. Las licencias NC (no comercial) no permiten usar el contenido en piezas de empresa.
 
-**Webs con nombres parecidos.** Algunas herramientas tienen webs de terceros con nombres casi iguales, como qrcodemonkey.net o monkeyqrcode.com frente a qrcode-monkey.com. Entra siempre desde el enlace de esta lista.
+**Ampliar fotos con IA.** Estas herramientas inventan el detalle que le falta a la foto: revisa textos, logotipos y caras antes de publicar el resultado. Si la foto muestra a personas, usa unlimited:waifu2x, que trabaja en local y no la sube.
+
+**Webs con nombres parecidos.** Algunas herramientas tienen webs de terceros con nombres casi iguales, como qrcodemonkey.net o monkeyqrcode.com frente a qrcode-monkey.com, waifu2x.pro o waifu2x.io frente a unlimited.waifu2x.net, o iloveimg2.com frente a iloveimg.com. Entra siempre desde el enlace de esta lista.
 
 ## Mantenimiento y cómo contribuir
 
@@ -241,6 +254,7 @@ Para avisar de un cambio, abre una incidencia (issue) con tres datos: la herrami
 
 Las versiones siguen el formato vX.Y: X cambia con el criterio o la estructura; Y, con las herramientas o los límites.
 
+- 2026-09-26 — v1.1 — Nueva categoría «Mejorar y ampliar fotos» con unlimited:waifu2x, Clipdrop e iLoveIMG, y su fila en «Elige rápido». Upscale.media, Let's Enhance y Upscayl pasan a «Fuera de la selección». Aviso sobre la ampliación con IA en «Privacidad». Total: 63 herramientas en 15 categorías.
 - 2026-09-24 — v1.0 — Primera publicación: 60 herramientas en 14 categorías, con elección rápida, rutas de trabajo y lista de descartes. Límites comprobados en webs oficiales, páginas de precios y centros de ayuda.
 
 ## Licencia y marcas
